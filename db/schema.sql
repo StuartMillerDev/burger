@@ -2,8 +2,8 @@ drop database if exists burgers_db;
 create database burgers_db;
   use burgers_db;
 
-create table burgers(
-  id int auto_increment not null,
-  burger_name varchar(255) not null,
-  devoured boolean default false;
-);
+CREATE TABLE `burgers_db`.`burgers` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `burger_name` VARCHAR(255) NOT NULL,
+  `devoured` TINYINT NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`));
