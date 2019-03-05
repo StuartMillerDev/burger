@@ -1,13 +1,10 @@
 <h1>burgers!</h1>
 
 <h2>burgers that are not sleepy!</h2>
-<div class="container">
-
-  <ul>
 
       {{#each burgers}}
         {{#unless devoured}}
-
+        <div class="col-lg-6">
           <div class="card card-default w-50 text-center">
             <div class="card-header">
               <h4>BURGER NAME</h4>
@@ -16,32 +13,30 @@
               {{this.burger_name}}
             </div>
           </div>
-          <button type="button" class="btn btn-default" data-burger={{this.id}}>
+          <button type="button" class="btn btn-default burger_id" data-burger={{this.id}}>
             DEVOUR!
           </button>
+        </div>
       {{/unless}}
       {{/each}}
 
-  </ul>
-</div>
 
 <h2>burgers that are sleepy!</h2>
 
-<ul>
   {{#each burgers}}
   {{#if devoured}}
-
-    <div class="container w-50">
-      <div class="card card-default w-100 text-center">
-        <div class="card-body">
-          <h3>{{this.id}}) </h3> {{this.burger_name}}
+    <div class="col-lg-6">
+      <div class="container w-50">
+        <div class="card card-default w-100 text-center">
+          <div class="card-body">
+            <h3>Burger: {{this.id}} </h3> {{this.burger_name}}
+          </div>
         </div>
       </div>
     </div>
   {{/if}}
   {{/each}}
 
-</ul>
 
 <h2>Add a burger</h2>
 <form class="create-form">
@@ -50,6 +45,5 @@
     <label for="ca">burger Name:</label>
     <input type="text" id="ca" name="name">
   </div>
-
   <button type="submit">Add burger</button>
 </form>
