@@ -1,10 +1,11 @@
-
-$(".burger_id").click(function(event){
+console.log("JS FILE LOADED");
+$("#burger_id").click(function(event){
 
 var id=this.attr("data-burger");
   var newState = {
         devoured: true
       };
+      console.log("UPDATE BURGER: ",  id);
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
@@ -18,22 +19,21 @@ var id=this.attr("data-burger");
       );
 });
 
-$("submit").on("submit", function(event) {
+$(".create-form").on("submit", function(event) {
   // Make sure to preventDefault on a submit event.
   event.preventDefault();
 
   var newBurger = {
-    name: $("#ca").val().trim(),
-    sleepy: $("[name=sleepy]:checked").val().trim()
+    name: $("#ca").val().trim()
   };
-
+console.log(newBurger);
   // Send the POST request.
   $.ajax("/api/burger", {
     type: "POST",
-    data: newCat
+    data: newBurger
   }).then(
     function() {
-      console.log("created new cat");
+      console.log("created new burger");
       // Reload the page to get the updated list
       location.reload();
     }

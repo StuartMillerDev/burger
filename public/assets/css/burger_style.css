@@ -1,5 +1,10 @@
 body{
   background-image: linear-gradient(#540B0E,#9E2A2B,#E09F3E);
+  background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
 }
 .card{
   background-color: #FFF3B0;
