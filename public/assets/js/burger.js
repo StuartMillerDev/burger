@@ -1,5 +1,5 @@
 console.log("JS FILE LOADED");
-$("#burger_id").click(function(event){
+$("#burger_id").on("click",function(event){
 
 var id=this.attr("data-burger");
   var newState = {

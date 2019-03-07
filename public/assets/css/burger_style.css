@@ -10,3 +10,14 @@ background-position: center;
   background-color: #FFF3B0;
   color: #335C67
 }
+.jumbotron{
+  background-image: url("https://cdnb.artstation.com/p/assets/images/images/005/397/723/large/joao-sanches-hamburguer-uhd.jpg?1490735421");
+  background-repeat: no-repeat;
+  height:500px;
+ background-attachment: fixed;
+  background-position: center;
+ background-size: cover;
+}
+
+
+.row{}
