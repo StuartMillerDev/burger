@@ -1,7 +1,7 @@
 console.log("JS FILE LOADED");
 $("#burger_id").on("click",function(event){
 
-var id=this.attr("data-burger");
+var id=$(this).attr("data-burger");
   var newState = {
         devoured: true
       };

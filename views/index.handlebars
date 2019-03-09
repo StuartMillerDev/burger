@@ -7,7 +7,7 @@
     <h2>burgers that are not sleepy!</h2>
     {{#each burgers}}
       {{#unless devoured}}
-      <div class="col-lg-6 w-50 p-3">
+
 
         <div class="card card-default w-50 text-center">
           <div class="card-header">
@@ -20,7 +20,7 @@
           </div>
         </div>
 
-      </div>
+
     {{/unless}}
     {{/each}}
     </div>
@@ -33,7 +33,7 @@
             <div class="col-lg-6 w-50 p-3">
 
 
-                <div class="card card-default w-100 text-center">
+                <div class="card card-default text-center">
                   <div class="card-body">
                     <h3>Burger: {{this.id}} </h3> {{this.burger_name}}
                   </div>
@@ -58,46 +58,3 @@
     </form>
   </div>
 </div>
-<!--
-
-
-    <div class="container float-left">
-      <h2>burgers that are not sleepy!</h2>
-      {{#each burgers}}
-        {{#unless devoured}}
-        <div class="col-lg-6 w-50 p-3">
-
-          <div class="card card-default w-50 text-center">
-            <div class="card-header">
-              <button type="button" class="btn btn-default burger_id" data-burger={{this.id}}>
-                DEVOUR!
-              </button>
-            </div>
-            <div class="card-body">
-              {{this.burger_name}}
-            </div>
-          </div>
-
-        </div>
-      {{/unless}}
-      {{/each}}
-    </div>
-
-
-    <div class="container float-right">
-      <h2>burgers that are sleepy!</h2>
-          {{#each burgers}}
-          {{#if devoured}}
-            <div class="col-lg-6 w-50 p-3">
-
-
-                <div class="card card-default w-100 text-center">
-                  <div class="card-body">
-                    <h3>Burger: {{this.id}} </h3> {{this.burger_name}}
-                  </div>
-                </div>
-
-            </div>
-          {{/if}}
-          {{/each}}
-    </div>
