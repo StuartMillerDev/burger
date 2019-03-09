@@ -3,17 +3,17 @@ $(function(){
   $(".burger_id").on("click",function(event){
   event.preventDefault();
   var id=$(this).attr("data-burger");
-    var newState = {
-          devoured: true
-        };
+    // var newState = {
+    //       devoured: true
+    //     };
         console.log("UPDATE BURGER: ",  id);
         // Send the PUT request.
-        $.ajax("/api/burgers/" + id, {
+        $.ajax("/api/burger/" + id, {
           type: "PUT",
-          data: newState
+          // data: newState
         }).then(
           function() {
-            console.log("changed devoured to", newState);
+            console.log("changed devoured");
             // Reload the page to get the updated list
             location.reload();
           }
