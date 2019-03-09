@@ -24,21 +24,26 @@ $(function(){
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    var newBurger = {
-      name: $("#ca").val().trim()
-    };
-  console.log(newBurger);
+    var newBurger = $(".ca").val().trim();
+    var data={
+      burger_name:newBurger
+    }
+  console.log("NEW BURGER NAME: ",newBurger);
     // Send the POST request.
-    $.ajax("/api/burger", {
+    $.ajax({
+      url: "/api/burger",
       type: "POST",
-      data: newBurger
+      data: data,
+      dataType: "text",
     }).then(
       function() {
         console.log("created new burger");
         // Reload the page to get the updated list
         location.reload();
       }
-    );
+    ).fail(function(err) {
+    console.log(err);
+  })
   });
 
 });
